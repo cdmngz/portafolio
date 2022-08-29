@@ -1,0 +1,28 @@
+{
+  "name": "portafolio",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vite preview",
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mdi/font": "5.9.55",
+    "firebase": "^9.9.3",
+    "roboto-fontface": "*",
+    "tsparticles": "^2.2.3",
+    "vue": "^3.2.37",
+    "vue3-particles": "^2.2.3",
+    "vuetify": "^3.0.0-beta.0",
+    "webfontloader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.3",
+    "vite": "^3.0.8",
+    "vite-plugin-vuetify": "^1.0.0-alpha.12",
+    "vue-cli-plugin-vuetify": "~2.5.4"
+  },
+  "type": "module"
+}
