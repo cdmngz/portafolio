@@ -407,7 +407,7 @@ const handleFlagLangOnClick = (value) => {
             thumb-label
             thumb-color="primary"
           >
-            <template v-slot:thumb-label="{ value }" style="background: red">
+            <template v-slot:thumb-label="{ value }">
               <v-card
                 width="280"
                 :style="

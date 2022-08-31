@@ -67,6 +67,7 @@ const options = {
         area: 800,
       },
       value: 60,
+      limit: 62,
     },
     opacity: {
       value: 0.3,
@@ -109,11 +110,12 @@ const particlesInit = async (engine) => {
   height: 40vh;
 }
 .text-particles {
+  display: flex;
+  left: 0;
   position: absolute;
   top: 60%;
-  left: 0;
+  user-select: none;
   width: 100%;
-  display: flex;
 }
 
 .text-particles h1 {
