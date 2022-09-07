@@ -58,7 +58,7 @@ const options = {
       enable: true,
       outMode: "bounce",
       random: false,
-      speed: 4,
+      speed: 3,
       straight: false,
     },
     number: {

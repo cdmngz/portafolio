@@ -346,11 +346,11 @@ const handleFlagLangOnClick = (value) => {
     <v-row>
       <v-col class="text-center" cols="12" xs="12" sm="4">
         <v-list class="d-flex flex-column">
-          <v-list-item-avatar style="margin: 0">
+          <v-list-item class="ma-none user-select-none">
             <img src="/assets/pic.png" />
-          </v-list-item-avatar>
+          </v-list-item>
           <v-list-item>
-            <v-list-item-content>
+            <v-list-item>
               <v-list-item-title class="font-weight-bold title"
                 >Carlos Domínguez</v-list-item-title
               >
@@ -383,14 +383,14 @@ const handleFlagLangOnClick = (value) => {
                 >
                 </v-img>
               </v-list-item>
-            </v-list-item-content>
+            </v-list-item>
           </v-list-item>
         </v-list>
       </v-col>
       <v-divider :vertical="!$vuetify.display.xs"></v-divider>
 
       <v-col cols="12" xs="12" sm="7" class="mx-4">
-        <h3 class="text-center" style="user-select: none">🌏🔬👨🏻‍💻</h3>
+        <h3 class="text-center user-select-none">🌏🔬👨🏻‍💻</h3>
         <br /><br /><br /><br />
         <v-row row wrap>
           <v-slider
@@ -412,8 +412,8 @@ const handleFlagLangOnClick = (value) => {
                 width="280"
                 :style="
                   $vuetify.display.xs
-                    ? 'margin: -60% 0 0 -55%'
-                    : 'transform: translateY(-45%)'
+                    ? 'margin: -60% 0 0 -15%'
+                    : 'transform: translateY(-50%)'
                 "
               >
                 <v-row>
@@ -483,3 +483,17 @@ const handleFlagLangOnClick = (value) => {
     </v-row>
   </v-container>
 </template>
+
+<style>
+.v-slider-thumb__label {
+  background: transparent !important;
+  color: transparent !important;
+  width: 0 !important;
+}
+.v-slider-thumb__label::before {
+  border: none !important;
+}
+.user-select-none {
+  user-select: none;
+}
+</style>
