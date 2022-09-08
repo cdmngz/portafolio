@@ -88,15 +88,15 @@ const particlesInit = async (engine) => {
 
 // SCENE
 const scene = new THREE.Scene();
-
+console.log(window.screen.width);
 // CAMERA
 const camera = new THREE.PerspectiveCamera(
-  7,
+  window.screen.width > 600 ? 4 : 12,
   window.innerWidth / window.innerHeight,
   0.1,
   1000
 );
-camera.position.set(0, 36, 180); // Set position like this
+camera.position.set(0, 80, 180); // Set position like this
 
 // RENDERER
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -108,8 +108,8 @@ renderer.shadowMap.enabled = true;
 // CONTROLS
 const orbitControls = new OrbitControls(camera, renderer.domElement);
 orbitControls.enableDamping = false;
-orbitControls.minDistance = 1;
-orbitControls.maxDistance = 30;
+orbitControls.minDistance = 10;
+orbitControls.maxDistance = 40;
 orbitControls.enablePan = false;
 orbitControls.maxPolarAngle = Math.PI / 2 - 0.05;
 orbitControls.update();
@@ -224,7 +224,7 @@ onMounted(() => {
   height: 100%;
 }
 .container-particles {
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   position: relative;
 }
@@ -238,7 +238,7 @@ onMounted(() => {
 }
 .lightsaber {
   position: absolute;
-  bottom: 25%;
+  bottom: 30%;
   right: 10%;
   animation: lightsaber 6s 4s;
 }
@@ -293,18 +293,18 @@ onMounted(() => {
   width: 15px;
 }
 .lightsaber input[type="checkbox"]:checked ~ div.plasma {
-  height: 55vh;
+  height: 48vh;
 }
 .planet {
   position: absolute;
-  animation: planet 6s 6s ease-out forwards;
+  animation: planet 5s 7s ease-out forwards;
 }
 .text-particles {
   display: flex;
   flex-direction: column;
   height: 100%;
   left: 0;
-  padding: 2% 5%;
+  padding: 2% 10%;
   position: absolute;
   top: 0;
   width: 100%;
@@ -312,7 +312,7 @@ onMounted(() => {
 .text-particles h2 {
   animation: movement 6s 4s;
   color: rgba(255, 255, 255, 0.5);
-  font-size: clamp(4rem, 10vw, 5rem);
+  font-size: clamp(3rem, 10vw, 4rem);
   font-weight: 400;
   margin: 0 auto;
   overflow: hidden;
@@ -353,14 +353,10 @@ onMounted(() => {
   }
   60%,
   70% {
-    width: 5.2em;
-  }
-  99% {
-    width: 99%;
+    width: 35%;
   }
   100% {
     width: 100%;
-    border-right: none;
   }
 }
 
@@ -376,6 +372,9 @@ onMounted(() => {
   .text-particles {
     justify-content: center;
     align-items: center;
+  }
+  .lightsaber input[type="checkbox"]:checked ~ div.plasma {
+    height: 28vh;
   }
 }
 </style>
