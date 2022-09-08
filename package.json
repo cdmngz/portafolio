@@ -12,6 +12,7 @@
     "@mdi/font": "5.9.55",
     "firebase": "^9.9.3",
     "roboto-fontface": "*",
+    "three": "^0.144.0",
     "tsparticles": "^2.2.3",
     "vue": "^3.2.37",
     "vue3-particles": "^2.2.3",

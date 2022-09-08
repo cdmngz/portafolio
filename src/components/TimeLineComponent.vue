@@ -91,16 +91,18 @@ const timeLineData = [
           :key="project"
           size="small"
         >
-          <a :href="project.href" target="_blank">
-            <v-card width="30vw">
-              <v-img
-                class="align-end text-white bg-black"
-                :src="`/assets/${project.imageSrc}`"
-                :lazy-src="`/assets/lazySrc.png`"
-              >
-              </v-img>
-            </v-card>
-          </a>
+          <Transition name="fade" appear>
+            <a :href="project.href" target="_blank">
+              <v-card width="30vw">
+                <v-img
+                  class="align-end text-white bg-black"
+                  :src="`/assets/${project.imageSrc}`"
+                  :lazy-src="`/assets/lazySrc.png`"
+                >
+                </v-img>
+              </v-card>
+            </a>
+          </Transition>
         </v-timeline-item>
       </v-timeline>
     </div>
@@ -127,5 +129,15 @@ const timeLineData = [
     rgba(46, 15, 21, 1) 35%,
     rgba(76, 117, 190, 1) 100%
   );
+}
+
+.v-enter-active,
+.v-leave-active {
+  transform: translateX(20px);
+}
+
+.v-enter-from,
+.v-leave-to {
+  transform: translateX(0px);
 }
 </style>
