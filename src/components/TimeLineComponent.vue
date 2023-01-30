@@ -8,7 +8,7 @@ const timeLineData = [
     projects: [
       {
         imageSrc: "secretfans.png",
-        href: "https://www.secretfans.fans/",
+        href: "https://secret-fans.web.app/",
         btnColor: "white",
       },
       {

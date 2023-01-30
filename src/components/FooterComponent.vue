@@ -13,10 +13,10 @@
         <v-btn
           icon
           variant="text"
-          href="https://www.linkedin.com/in/carlos-dom%C3%ADnguez-b27b23221/"
+          href="https://www.youtube.com/@cdapps"
           target="_blank"
         >
-          <v-icon size="24px">mdi-linkedin</v-icon>
+          <v-icon size="24px">mdi-youtube</v-icon>
         </v-btn>
         <v-btn
           icon
